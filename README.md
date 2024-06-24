@@ -60,6 +60,8 @@ Welcome to **HR GPT**, a one-stop tool designed for HR executives to streamline 
 
 - The guardrails configuration is located in the `./config` directory.
 - Update the job description and experience level via the Streamlit sidebar.
+- Incase of any issues, use **dash.py** with **key.py** for running the application without NVIDIA NeMo™ Guardrails. 
+- **key.py** stores the api keys which are then called in **dash.py**
 
 ## Usage
 
