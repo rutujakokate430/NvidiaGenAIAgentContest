@@ -1,57 +1,74 @@
-Human Resource Portal- HR GPT 🗒️
-The Human Resource Portal is a comprehensive tool designed for HR executives to streamline candidate screening, perform background verification, identify better fitting job roles, and determine average salary ranges. This project leverages NVIDIA's NIM endpoints for inference and NeMo™ Guardrails to ensure accurate and compliant responses from language models.
+# HR GPT - A Comprehensive Tool for HR Executives
 
-Features
-Candidate Screening: Utilizes RAG to extract tokens from resumes and job descriptions, creating embeddings for matching skills.
+Welcome to **HR GPT**, a one-stop tool designed for HR executives to streamline the hiring process. This tool offers capabilities for candidate screening, background verification, finding better fitting job roles, and checking average salary ranges according to market standards.
 
-Background Verification: A LangChain agent performs web searches to verify candidate backgrounds, calculating estimated ages based on available data.
+## Features
 
-Better Fitting Job Roles: LangChain agents search for job openings that closely match candidates' skills from their resumes.
+1. **Candidate Screening**:
+    - Extracts tokens from resumes and job descriptions using Retrieval-Augmented Generation (RAG).
+    - Creates embeddings with NVIDIAEmbeddings.
+    - Stores embeddings using FAISS for efficient similarity search.
 
-Average Salary Range: LangChain agents search for and provide the average salary range for specific job roles based on market standards.
+2. **Background Verification**:
+    - Uses a LangChain Agent to perform web searches for background verification.
+    - Calculates the candidate's age based on available information.
 
-Setup
-Requirements
-Ensure you have Python 3.7+ installed.
+3. **Job Fit Analysis**:
+    - Performs web searches to find job roles better suited to the candidate's skills.
+    - Can be tailored to search for job openings in specific companies.
 
-Installation
-Clone the repository:
+4. **Salary Range Check**:
+    - Searches the web for average salary ranges for the candidate's skills and job role.
 
-bash
-Copy code
-git clone <repository-url>
-cd human-resource-portal
-Install dependencies:
+## Technologies Used
 
-bash
-Copy code
-pip install -r requirements.txt
-Configuration
-Set environment variables:
+- **NVIDIA NIM Endpoints** for high-performance inference.
+- **NVIDIA NeMo™ Guardrails** to control LLM output.
+- **Streamlit** for an interactive web interface.
+- **Plotly** for data visualization.
+- **FAISS** for fast similarity search.
+- **LangChain** for building LLM applications.
+- **PyPDF2** for PDF handling.
 
-bash
-Copy code
-export SERPAPI_API_KEY=<your-serpapi-api-key>
-export NVIDIA_API_KEY=<your-nvidia-api-key>
-Configure Guardrails:
+## Installation
 
-Ensure your Guardrails configuration files (config.yml, prompts.yml) are correctly set up for security and compliance.
-Usage
-Run the Streamlit application:
+1. Clone the repository:
+    ```bash
+    git clone - https://github.com/rutujakokate430/NvidiaGenAIAgentContest/tree/main
+    cd hr-gpt
+    ```
 
-bash
-Copy code
-streamlit run app.py
-Access the Human Resource Portal via your web browser.
+2. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Example Workflow
-Select the experience level and enter the job description in the sidebar.
-Upload the candidate's resume.
-Explore various sections:
-Resume Screening: See the percentage of skills matched with the job description.
-Candidate Background: View estimated candidate age and background verification details.
-Other Better Fitting Roles: Discover hyperlinked URLs to job roles better suited to the candidate.
-Salary Range: Find the average salary range for the specified job description.
-Credits
-NVIDIA NIM Endpoints: For providing powerful inference capabilities.
-NVIDIA NeMo™ Guardrails: Ensuring secure and compliant responses from language models.
+3. Set up your API keys in the `key.py` file:
+    ```python
+    nvidia_api_key = "your_nvidia_api_key"
+    serp_api_key = "your_serp_api_key"
+    ```
+
+4. Run the application:
+    ```bash
+    streamlit run app.py
+    ```
+
+## Configuration
+
+- The guardrails configuration is located in the `./config` directory.
+- Update the job description and experience level via the Streamlit sidebar.
+
+## Usage
+
+1. **Upload the candidate's resume** in PDF format.
+2. **Enter the job description** in the provided text area.
+3. **Select the experience level** from the dropdown menu.
+4. **View the results** for candidate screening, background verification, better fitting roles, and salary range.
+
+## Acknowledgments
+
+- Thanks to **NVIDIA** for the contest and the high-performance **NVIDIA NIM Endpoints** for inference.
+- Special appreciation for **NVIDIA NeMo™ Guardrails** for ensuring accurate and controlled LLM outputs.
+
+
