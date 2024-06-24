@@ -2,6 +2,8 @@
 
 Welcome to **HR GPT**, a one-stop tool designed for HR executives to streamline the hiring process. This tool offers capabilities for candidate screening, background verification, finding better fitting job roles, and checking average salary ranges according to market standards.
 
+<img width="649" alt="Screenshot 2024-06-23 180144" src="https://github.com/rutujakokate430/NvidiaGenAIAgentContest/assets/111034043/0baaa1fc-e10f-4ec6-b085-4816947c8469">
+
 ## Features
 
 1. **Candidate Screening**:
