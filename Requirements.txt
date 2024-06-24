@@ -1,0 +1,9 @@
+os
+re
+plotly==5.4.0
+key
+streamlit==1.3.0
+PyPDF2==2.6.0
+langchain==0.0.66
+langchain_nvidia_ai_endpoints==0.1.2
+nemoguardrails==0.2.0
